@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="projects">
+      <div v-for="project in  projects" :key="project.name">
+        <project-card v-bind="project"/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProjectCard from "./components/ProjectCard.vue";
+import projectData from "./project.json";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    ProjectCard
+  },
+  data() {
+    return { projects: [] };
+  },
+  created() {
+    this.projects = projectData;
   }
-}
+};
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Itim");
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: "Itim";
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 </style>

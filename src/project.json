@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Name 1",
+        "description": "Description of project 1",
+        "tech": "Android, Java"
+    },
+    {
+        "name": "Name 2",
+        "description": "Description of project 2",
+        "tech": "Android, Kotlin"
+    },
+    {
+        "name": "Name 3",
+        "description": "Description of project 3",
+        "tech": "Web, Php"
+    },
+    {
+        "name": "Name 4",
+        "description": "Description of project 4",
+        "tech": "Web, Vue"
+    },
+    {
+        "name": "Name 5",
+        "description": "Description of project 5",
+        "tech": "Web, Vue"
+    },
+    {
+        "name": "Name 6",
+        "description": "Description of project 6",
+        "tech": "Web, Vue"
+    }
+]
