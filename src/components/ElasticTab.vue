@@ -6,7 +6,7 @@
       ref="menu"
       :key="key"
       :class="{ active: activeId === key }"
-      @click="activeId = key; click();"
+      @click="activeId = key; click(); $emit('item-selected', item)"
     >{{ item }}</a>
   </nav>
 </template>

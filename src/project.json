@@ -2,31 +2,36 @@
     {
         "name": "Name 1",
         "description": "Description of project 1",
-        "tech": "Android, Java"
+        "type": "Android"
     },
     {
         "name": "Name 2",
         "description": "Description of project 2",
-        "tech": "Android, Kotlin"
+        "type": "Android"
     },
     {
         "name": "Name 3",
         "description": "Description of project 3",
-        "tech": "Web, Php"
+        "type": "Web"
     },
     {
         "name": "Name 4",
         "description": "Description of project 4",
-        "tech": "Web, Vue"
+        "type": "Web"
     },
     {
         "name": "Name 5",
         "description": "Description of project 5",
-        "tech": "Web, Vue"
+        "type": "Android"
     },
     {
         "name": "Name 6",
         "description": "Description of project 6",
-        "tech": "Web, Vue"
+        "type": "Web"
+    },
+    {
+        "name": "Name 7",
+        "description": "Description of project 7",
+        "type": "Web"
     }
 ]

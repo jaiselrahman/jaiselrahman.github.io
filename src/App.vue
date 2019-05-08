@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <div id="projects-type">
-      <elastic-tab :menu="['All', 'Android','Web']" />
+      <elastic-tab :menu="['All', 'Android','Web']" @item-selected="onSelectedType" />
     </div>
-    <div id="projects">
+    <transition-group tag="div" id="projects" name="projects" mode="in-out">
       <div v-for="project in projects" :key="project.name">
         <project-card v-bind="project" />
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -27,6 +27,15 @@ export default {
   },
   created() {
     this.projects = projectData;
+  },
+  methods: {
+    onSelectedType(type) {
+      if (type == "All") {
+        this.projects = projectData;
+      } else {
+        this.projects = projectData.filter(i => i.type === type);
+      }
+    }
   }
 };
 </script>
@@ -47,5 +56,25 @@ export default {
 #projects-type {
   text-align: center;
   padding: 1rem;
+}
+
+.projects-move {
+  transition: all 500ms;
+}
+
+.projects-enter,
+.projects-leave-to {
+  opacity: 0;
+}
+
+.projects-leave,
+.projects-enter-to {
+  opacity: 1;
+}
+
+.projects-leave-active {
+  transition: 500ms;
+  position: absolute;
+  margin-top: 50%;
 }
 </style>
