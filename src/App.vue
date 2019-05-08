@@ -3,10 +3,8 @@
     <div id="projects-type">
       <elastic-tab :menu="['All', 'Android','Web']" @item-selected="onSelectedType" />
     </div>
-    <transition-group tag="div" id="projects" name="projects" mode="in-out">
-      <div v-for="project in projects" :key="project.name">
-        <project-card v-bind="project" />
-      </div>
+    <transition-group tag="div" id="projects" name="projects">
+      <project-card v-for="project in projects" :key="project.name" v-bind="project" />
     </transition-group>
   </div>
 </template>
@@ -73,8 +71,8 @@ export default {
 }
 
 .projects-leave-active {
-  transition: 500ms;
+  transition: 300ms;
   position: absolute;
-  margin-top: 50%;
+  top: 50%;
 }
 </style>
