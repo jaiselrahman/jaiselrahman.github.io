@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <profile-page />
     <div id="projects-type">
       <elastic-tab :menu="['All', 'Android','Web']" @item-selected="onSelectedType" />
     </div>
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import ProfilePage from "./components/ProfilePage";
 import ElasticTab from "./components/ElasticTab.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import projectData from "./project.json";
@@ -18,7 +20,8 @@ export default {
   name: "App",
   components: {
     ProjectCard,
-    ElasticTab
+    ElasticTab,
+    ProfilePage
   },
   data() {
     return { projects: [] };
@@ -40,6 +43,10 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Itim");
+
+body {
+  margin: 0;
+}
 
 #app {
   font-family: "Itim";
