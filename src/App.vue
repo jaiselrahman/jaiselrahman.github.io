@@ -66,20 +66,18 @@ body {
 .projects-move {
   transition: all 500ms;
 }
+.projects-enter-active {
+  transition: all 200ms ease-out;
+}
+
+.projects-leave-active {
+  position: absolute;
+  transition: all 200ms ease-in;
+  transform: scale(0.5);
+}
 
 .projects-enter,
 .projects-leave-to {
   opacity: 0;
-}
-
-.projects-leave,
-.projects-enter-to {
-  opacity: 1;
-}
-
-.projects-leave-active {
-  transition: 300ms;
-  position: absolute;
-  top: 50%;
 }
 </style>
