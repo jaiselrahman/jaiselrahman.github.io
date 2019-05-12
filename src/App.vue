@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <profile-page />
+    <profile-page :profile="profileData" />
     <div id="projects-type">
       <elastic-tab :menu="['All', 'Android','Web']" @item-selected="onSelectedType" />
     </div>
@@ -14,7 +14,9 @@
 import ProfilePage from "./components/ProfilePage";
 import ElasticTab from "./components/ElasticTab.vue";
 import ProjectCard from "./components/ProjectCard.vue";
+
 import projectData from "./project.json";
+import profileData from "./profile.json";
 
 export default {
   name: "App",
@@ -24,10 +26,7 @@ export default {
     ProfilePage
   },
   data() {
-    return { projects: [] };
-  },
-  created() {
-    this.projects = projectData;
+    return { projects: projectData, profileData: profileData };
   },
   methods: {
     onSelectedType(type) {

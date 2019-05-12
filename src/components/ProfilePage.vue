@@ -1,21 +1,36 @@
 <template>
   <div class="profile-page">
-    <img class="circular-img profile" :src="require('../assets/logo.png')">
-    <div class="name">Jaisel Rahman</div>
-    <div class="bio">Interested in Android and Web development. Loves Opensource.</div>
+    <img class="circular-img profile" :src="getIcon(profile.profilePic)">
+    <div class="name">{{ profile.name }}</div>
+    <div class="bio">{{ profile.bio }}</div>
     <div class="contacts">
-      <img class="circular-img logo" :src="require('../assets/github_56.png')">
-      <img class="circular-img logo" :src="require('../assets/linkedin_56.png')">
-      <img class="circular-img logo" :src="require('../assets/twitter_56.png')">
-      <img class="circular-img logo" :src="require('../assets/stackoverflow_56.png')">
-      <img class="circular-img logo" :src="require('../assets/blogger_56.png')">
+      <a v-for="contact in profile.contacts" :key="contact.name" :href="contact.link">
+        <img
+          class="circular-img logo"
+          :alt="contact.name"
+          :src="getIcon(contact.icon)"
+          :title="contact.name"
+        >
+      </a>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ProfilePage"
+  name: "ProfilePage",
+  props: {
+    profile: Object
+  },
+  methods: {
+    getIcon(icon) {
+      try {
+        return require("../assets/" + icon);
+      } catch {
+        return null;
+      }
+    }
+  }
 };
 </script>
 
