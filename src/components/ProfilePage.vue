@@ -21,8 +21,8 @@ export default {
 
 <style scoped>
 .profile-page {
-  height: 90vh;
-  padding-top: 10vh;
+  min-height: 80vh;
+  padding: 10vh 0;
   background: #3963bd;
   background: -moz-linear-gradient(
     to bottom right,
@@ -53,10 +53,22 @@ export default {
 }
 
 .bio {
-  margin-top: 1rem;
+  margin: 1rem 10%;
   color: white;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: justify;
+}
+
+@media only screen and (min-width: 700px) {
+  .bio {
+    margin: 1rem 20%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .bio {
+    margin: 1rem 30%;
+  }
 }
 
 .profile {
