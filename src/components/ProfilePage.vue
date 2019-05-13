@@ -74,6 +74,13 @@ export default {
   text-align: justify;
 }
 
+@media only screen and (max-width: 700px) {
+  .profile-page {
+    min-height: 70vh;
+    padding: 18vh 0 12vh 0;
+  }
+}
+
 @media only screen and (min-width: 700px) {
   .bio {
     margin: 1rem 20%;

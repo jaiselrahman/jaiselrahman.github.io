@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <profile-page :profile="profileData" />
-    <div id="projects-type">
+    <navigator />
+    <profile-page id="home" :profile="profileData" />
+    <div id="projects">
       <elastic-tab :menu="['All', 'Android','Web']" @item-selected="onSelectedType" />
     </div>
-    <transition-group tag="div" id="projects" name="projects">
+    <transition-group tag="div" class="projects" name="projects">
       <project-card v-for="project in projects" :key="project.name" v-bind="project" />
     </transition-group>
   </div>
 </template>
 
 <script>
-import ProfilePage from "./components/ProfilePage";
+import ProfilePage from "./components/ProfilePage.vue";
 import ElasticTab from "./components/ElasticTab.vue";
 import ProjectCard from "./components/ProjectCard.vue";
+import Navigator from "./components/Navigator.vue";
 
 import projectData from "./project.json";
 import profileData from "./profile.json";
@@ -23,7 +25,8 @@ export default {
   components: {
     ProjectCard,
     ElasticTab,
-    ProfilePage
+    ProfilePage,
+    Navigator
   },
   data() {
     return { projects: projectData, profileData: profileData };
@@ -43,6 +46,10 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Itim");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -51,15 +58,21 @@ body {
   font-family: "Itim";
 }
 
-#projects {
+.projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-#projects-type {
+#projects {
   text-align: center;
   padding: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  #projects {
+    padding: 3rem 1rem 1rem 1rem;
+  }
 }
 
 .projects-move {
