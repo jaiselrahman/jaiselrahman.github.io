@@ -8,6 +8,7 @@
     <transition-group tag="div" class="projects" name="projects">
       <project-card v-for="project in projects" :key="project.name" v-bind="project" />
     </transition-group>
+    <contact-form id="contact" />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import ProfilePage from "./components/ProfilePage.vue";
 import ElasticTab from "./components/ElasticTab.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import Navigator from "./components/Navigator.vue";
+import ContactForm from "./components/ContactForm.vue";
 
 import projectData from "./project.json";
 import profileData from "./profile.json";
@@ -26,6 +28,7 @@ export default {
     ProjectCard,
     ElasticTab,
     ProfilePage,
+    ContactForm,
     Navigator
   },
   data() {
