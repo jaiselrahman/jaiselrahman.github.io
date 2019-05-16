@@ -1,7 +1,8 @@
 {
     "name": "Jaisel Rahman",
-    "profilePic" : "logo.png",
+    "profilePic": "logo.png",
     "bio": "I am a B.Tech IT student currently living in Chennai. My interests range from programming to watching movies. If you’d like to get in touch, feel free to say hello through any of the social links below.",
+    "spreadsheetUrl": "https://script.google.com/macros/s/AKfycbyB9uOgZvG6z9hS_wWJUOyrI0UO1ysgnCvwkxp8porWAGc81P97/exec",
     "contacts": [
         {
             "name": "Github",

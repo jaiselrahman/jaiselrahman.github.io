@@ -2,25 +2,66 @@
   <div class="contact-form">
     <h1 class="title">Contact Me</h1>
     <div class="form">
-      <form name="contact" action method="post">
+      <form name="contact" @submit.prevent="submit()" novalidate="true">
         <label class="form-label" for="name">Name</label>
-        <input class="form-field" type="text" name="name" id="name">
+        <input class="form-field" type="text" v-model="name">
         <label class="form-label" for="email">Email</label>
-        <input class="form-field" type="text" name="email" id="email" required>
+        <input class="form-field" type="email" v-model="email" required>
         <label class="form-label" for="message">Message</label>
-        <textarea class="form-field" type="text" name="message" id="message" rows="5" />
-        <input class="form-button" type="submit" value="Send message" @click="submit()">
+        <textarea class="form-field" type="text" v-model="message" rows="5" />
+        <div>
+          <span v-show="status" class="status" ref="status">{{ status }}</span>
+          <input class="form-button" type="submit" value="Send message">
+        </div>
       </form>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+import { setTimeout } from "timers";
+
 export default {
   name: "ContactForm",
+  props: {
+    spreadsheetUrl: String
+  },
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+      status
+    };
+  },
   methods: {
     submit() {
-      alert("Submitted");
+      this.setStatus("Submitting...", "default");
+      if (!/^.+@[^\\.].*\.[a-z]{2,}$/.test(this.email)) {
+        this.setStatus("Invalid email", "error");
+      } else if (this.message.length <= 0) {
+        this.setStatus("Empty message", "error");
+      } else {
+        axios
+          .get(this.spreadsheetUrl, { params: this.$data })
+          .then(() => {
+            this.setStatus("Successfully submitted", "success");
+          })
+          .catch(() => {
+            this.setStatus("Submission failed", "error");
+          });
+      }
+    },
+    setStatus(message, status) {
+      this.$refs.status.classList.remove("default");
+      this.$refs.status.classList.remove("success");
+      this.$refs.status.classList.remove("error");
+      this.$refs.status.classList.add(status);
+      this.status = message;
+      setTimeout(() => {
+        this.status = null;
+      }, 3000);
     }
   }
 };
@@ -51,6 +92,29 @@ export default {
   text-align: right;
 }
 
+.status {
+  display: block;
+  position: absolute;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: left;
+  color: white;
+  font-size: 14pt;
+}
+
+.status.success {
+  background: rgba(60, 255, 0, 0.25);
+}
+
+.status.error {
+  background: rgba(255, 0, 0, 0.25);
+}
+
+.status.default {
+  background: rgba(0, 255, 234, 0.25);
+}
+
 @media only screen and (max-width: 900px) {
   .form {
     width: 60%;
@@ -60,6 +124,15 @@ export default {
 @media only screen and (max-width: 700px) {
   .form {
     width: 80%;
+  }
+
+  .status {
+    text-align: center;
+    position: relative;
+  }
+
+  .form-button {
+    width: 100%;
   }
 }
 

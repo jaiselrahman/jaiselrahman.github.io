@@ -8,7 +8,7 @@
     <transition-group tag="div" class="projects" name="projects">
       <project-card v-for="project in projects" :key="project.name" v-bind="project" />
     </transition-group>
-    <contact-form id="contact" />
+    <contact-form id="contact" :spreadsheet-url="profileData.spreadsheetUrl" />
   </div>
 </template>
 
