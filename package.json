@@ -1,6 +1,10 @@
 {
-  "name": "vue-demo",
+  "name": "my-portfolio",
   "version": "0.1.0",
+  "author": {
+    "name": "Jaisel Rahman",
+    "email": "jaiselrahman@gmail.com"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
