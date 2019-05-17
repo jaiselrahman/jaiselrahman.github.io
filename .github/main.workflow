@@ -1,19 +1,20 @@
 workflow "Deploy to Github Pages" {
   on = "push"
-  resolves = ["Deploy to gh-pages"]
+  resolves = ["Deploy to master"]
 }
 
-action "Use master branch" {
+action "Use src branch" {
   uses = "actions/bin/filter@3c0b4f0e63ea54ea5df2914b4fabf383368cd0da"
-  args = "branch master"
+  args = "branch src"
 }
 
-action "Deploy to gh-pages" {
+action "Deploy to master" {
   uses = "JamesIves/github-pages-deploy-action@master"
-  needs = ["Use master branch"]
+  needs = ["Use src branch"]
   secrets = ["ACCESS_TOKEN"]
   env = {
-    BRANCH = "gh-pages"
+    BASE_BRANCH = "src"
+    BRANCH = "master"
     BUILD_SCRIPT = "npm install && npm run build --modern"
     FOLDER = "dist"
   }
