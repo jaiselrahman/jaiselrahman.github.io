@@ -1,6 +1,6 @@
 workflow "Deploy to Github Pages" {
-  on = "push"
   resolves = ["Deploy to master"]
+  on = "push"
 }
 
 action "Use src branch" {
@@ -9,7 +9,7 @@ action "Use src branch" {
 }
 
 action "Deploy to master" {
-  uses = "JamesIves/github-pages-deploy-action@master"
+  uses = "jaiselrahman/github-pages-deploy-action@master"
   needs = ["Use src branch"]
   secrets = ["ACCESS_TOKEN"]
   env = {
