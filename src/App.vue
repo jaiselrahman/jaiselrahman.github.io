@@ -1,6 +1,13 @@
 <template>
   <div id="app">
     <navigator />
+    <a
+      class="github-fork-ribbon"
+      :href="profileData.projectUrl"
+      data-ribbon="Fork me on GitHub"
+      title="Fork me on GitHub"
+      target="_bank"
+    >Fork me on GitHub</a>
     <profile-page id="home" :profile="profileData" />
     <div id="projects">
       <elastic-tab :menu="['All', 'Android','Web']" @item-selected="onSelectedType" />
@@ -18,6 +25,8 @@ import ElasticTab from "./components/ElasticTab.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import Navigator from "./components/Navigator.vue";
 import ContactForm from "./components/ContactForm.vue";
+
+import "github-fork-ribbon-css/gh-fork-ribbon.css";
 
 import projectData from "./project.json";
 import profileData from "./profile.json";
@@ -94,5 +103,9 @@ body {
 .projects-enter,
 .projects-leave-to {
   opacity: 0;
+}
+
+.github-fork-ribbon:before {
+  background: black;
 }
 </style>
