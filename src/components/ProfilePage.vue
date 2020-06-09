@@ -1,6 +1,8 @@
 <template>
   <div class="profile-page">
-    <img class="circular-img profile" :src="getIcon(profile.profilePic)">
+    <div class="circular-img">
+      <img class="profile" :src="getIcon(profile.profilePic)" >
+    </div>
     <div class="name">{{ profile.name }}</div>
     <div class="bio">{{ profile.bio }}</div>
     <div class="contacts">
@@ -94,15 +96,20 @@ export default {
 }
 
 .profile {
-  display: block;
-  margin: auto;
-  width: 10rem;
-  background: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  width: 100%;
+  bottom: 1.75rem;
+  align-content: center;
+  clip-path: ellipse(68% 85% at 50% 10%);
 }
 
 .circular-img {
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
+  background: white;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
 .contacts {
