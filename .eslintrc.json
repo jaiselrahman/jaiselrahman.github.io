@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "parser": "babel-eslint"
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/strongly-recommended"
+    ],
+    "rules": {
+        "semi": 0,
+        "no-console" : 0,
+        "max-len" : [0, 100, 4],
+        "vue/max-attributes-per-line": [
+            "error",
+            {
+                "singleline": 5,
+                "multiline": {
+                    "max": 5,
+                    "allowFirstLine": false
+                }
+            }
+        ],
+        "vue/singleline-html-element-content-newline": 0
+    }
+}

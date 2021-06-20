@@ -1,37 +1,126 @@
 [
-    {
-        "name": "Name 1",
-        "description": "Description of project 1",
-        "type": "Android"
-    },
-    {
-        "name": "Name 2",
-        "description": "Description of project 2",
-        "type": "Android"
-    },
-    {
-        "name": "Name 3",
-        "description": "Description of project 3",
-        "type": "Web"
-    },
-    {
-        "name": "Name 4",
-        "description": "Description of project 4",
-        "type": "Web"
-    },
-    {
-        "name": "Name 5",
-        "description": "Description of project 5",
-        "type": "Android"
-    },
-    {
-        "name": "Name 6",
-        "description": "Description of project 6",
-        "type": "Web"
-    },
-    {
-        "name": "Name 7",
-        "description": "Description of project 7",
-        "type": "Web"
-    }
+  {
+    "name": "Android FilePicker Library",
+    "description": "A FilePicker library for Android for selecting multiple types of files and also to capture Images and Videos.",
+    "type": "Android",
+    "img": "",
+    "techs": ["java", "library", "mediastore"],
+    "links": [
+      {
+        "url": "https://github.com/jaiselrahman/FilePicker/releases/download/1.2.0/app-release.apk",
+        "icon": "view_download.png"
+      },
+      {
+        "url": "https://github.com/jaiselrahman/FilePicker",
+        "icon": "view_github.png"
+      }
+    ]
+  },
+  {
+    "name": "WorkshopWebsite",
+    "description": "A website for machine learning workshop",
+    "techs": ["html", "css", "js", "bootstrap", "jquery"],
+    "type": "Web",
+    "links": [
+      {
+        "url": "https://ml-mce.netlify.com",
+        "icon": "view_new_tab.png"
+      },
+      {
+        "url": "https://github.com/jaiselrahman/WorkshopWebsite",
+        "icon": "view_github.png"
+      }
+    ]
+  },
+  {
+    "name": "Fundo",
+    "description": "A website built for fun using php. Contains Flames and Xo game.",
+    "techs": ["php", "slim", "smarty"],
+    "type": "Web",
+    "links": [
+      {
+        "url": "http://fundo.ezyro.com/",
+        "icon": "view_new_tab.png"
+      },
+      {
+        "url": "https://github.com/jaiselrahman/Fundo",
+        "icon": "view_github.png"
+      }
+    ]
+  },
+  {
+    "name": "DialogflowChatbot",
+    "description": "Android Chatbot implemented using Dialogflow",
+    "techs": ["java", "dialogflow", "chatbot"],
+    "type": "Android",
+    "links": [
+      {
+        "url": "https://github.com/jaiselrahman/DialogflowChatbot/releases/download/1.0.0/app-release.apk",
+        "icon": "view_download.png"
+      },
+      {
+        "url": "https://github.com/jaiselrahman/DialogflowChatbot",
+        "icon": "view_github.png"
+      }
+    ]
+  },
+  {
+    "name": "Flaminius2k19 Web",
+    "description": "MCE Flaminius 2k19 Symposium website",
+    "techs": ["vue", "google apps script"],
+    "type": "Web",
+    "links": [
+      {
+        "url": "https://flaminius2k19.web.app/",
+        "icon": "view_new_tab.png"
+      },
+      {
+        "url": "https://github.com/jaiselrahman/Flaminius2k19Web",
+        "icon": "view_github.png"
+      }
+    ]
+  },
+  {
+    "name": "AgendaCalendarView",
+    "description": "Android view with agenda list and calendar with events",
+    "techs": ["java", "library", "paging"],
+    "type": "Android",
+    "links": [
+      {
+        "url": "https://github.com/jaiselrahman/AgendaCalendarView",
+        "icon": "view_github.png"
+      }
+    ]
+  },
+  {
+    "name": "Flaminius2k19 Android",
+    "description": "MCE Flaminius 2k19 Symposium App",
+    "techs": ["ui", "kotlin", "google apps script"],
+    "type": "Android",
+    "links": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=app.flaminius.flaminius2k19",
+        "icon": "view_download.png"
+      },
+      {
+        "url": "https://github.com/jaiselrahman/AgendaCalendarView",
+        "icon": "view_github.png"
+      }
+    ]
+  },
+  {
+    "name": "My Personal Portfolio",
+    "description": "My Personal Portfolio",
+    "techs": ["vue", "google apps script"],
+    "type": "Web",
+    "links": [
+      {
+        "url": "#",
+        "icon": "view_new_tab.png"
+      },{
+        "url": "https://github.com/jaiselrahman/jaiselrahman.github.io",
+        "icon": "view_github.png"
+      }
+    ]
+  }
 ]
