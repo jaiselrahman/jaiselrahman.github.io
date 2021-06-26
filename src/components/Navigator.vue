@@ -1,5 +1,5 @@
 <template>
-  <div class="menu" is="transition-group" name="menus">
+  <transition-group tag="ul" class="menu" name="menus">
     <li class="main-icon" key="main" @click="toggle()" ref="menu-bar">
       <div class="container">
         <div class="bar1" />
@@ -27,7 +27,7 @@
         <img class="icon-four" :src="require('../assets/menu_message_48.png')">
       </a>
     </li>
-  </div>
+  </transition-group>
 </template>
 
 <script>
@@ -54,6 +54,7 @@ export default {
   left: 0;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
+  padding: 0;
   list-style: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -157,7 +158,7 @@ export default {
   transition: all 300ms ease-in;
 }
 
-.menus-enter {
+.menus-enter-from {
   transform: rotate(150deg);
 }
 

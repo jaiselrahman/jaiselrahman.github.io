@@ -1,41 +1,53 @@
 <template>
   <nav class="tabs">
-    <div ref="selector" class="selector" />
+    <div ref="selectorRef" class="selector" />
     <a
       v-for="(item, key) in menu"
-      ref="menu"
+      :ref="(el) => (menuRefs[key] = el)"
       :key="key"
       :class="{ active: activeId === key }"
-      @click="activeId = key; click(); $emit('item-selected', item)"
+      @click="(event) => click(event, item, key)"
     >{{ item }}</a>
   </nav>
 </template>
 
 <script>
+import { onMounted, onBeforeUpdate, ref } from "vue";
+
 export default {
   name: "ElasticTab",
+  emits: ["item-selected"],
   props: {
-    menu: Array
+    menu: { type: Array, default: () => [] },
   },
-  data() {
+  setup(props, { emit }) {
+    const activeId = ref(0);
+    const selectorRef = ref(null);
+    const menuRefs = ref([]);
+
+    onBeforeUpdate(() => (menuRefs.value = []));
+
+    onMounted(() => {
+      const target = menuRefs.value[0];
+      selectorRef.value.style.left = target.offsetLeft + "px";
+      selectorRef.value.style.width = target.offsetWidth + "px";
+    });
+
+    const click = (event, item, key) => {
+      let target = event.target;
+      selectorRef.value.style.left = target.offsetLeft + "px";
+      selectorRef.value.style.width = target.offsetWidth + "px";
+      activeId.value = key;
+      emit('item-selected', item)
+    };
+
     return {
-      activeId: 0
+      selectorRef,
+      menuRefs,
+      activeId,
+      click,
     };
   },
-  mounted() {
-    let selector = this.$refs.selector;
-    let target = this.$refs.menu[0];
-    selector.style.left = target.offisetLeft + "px";
-    selector.style.width = target.offsetWidth + "px";
-  },
-  methods: {
-    click() {
-      let target = event.target;
-      let selector = this.$refs.selector;
-      selector.style.left = target.offsetLeft + "px";
-      selector.style.width = target.offsetWidth + "px";
-    }
-  }
 };
 </script>
 

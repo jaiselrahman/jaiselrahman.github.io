@@ -1,6 +1,6 @@
 <template>
-  <div class="card">
-    <img class="img" :src="img" />
+  <div class="card" :style="{background: bg}">
+    <img class="img" :src="img" :alt="name">
 
     <h3 class="title">{{ name }}</h3>
 
@@ -11,7 +11,7 @@
       </div>
       <div class="links">
         <a v-for="link in links" :key="link" :href="link.url" target="_blank">
-          <img class="icon" :src="getIcon(link.icon)" />
+          <img class="icon" :src="getIcon(link.icon)" alt="">
         </a>
       </div>
     </div>
@@ -26,7 +26,7 @@ export default {
     description: { type: String, required: true },
     img: { type: String, required: true},
     techs: { type: Array, required: true },
-    links: { type: Array, required: true },
+    links: { type: Array, required: true }
   },
   methods: {
     getIcon(icon) {

@@ -4,11 +4,11 @@
     <div class="form">
       <form name="contact" @submit.prevent="submit()" novalidate="true">
         <label class="form-label" for="name">Name</label>
-        <input class="form-field" type="text" v-model="name">
+        <input class="form-field" id="name" type="text" v-model="name">
         <label class="form-label" for="email">Email</label>
-        <input class="form-field" type="email" v-model="email" required>
+        <input class="form-field" id="email" type="email" v-model="email" required>
         <label class="form-label" for="message">Message</label>
-        <textarea class="form-field" type="text" v-model="message" rows="5" />
+        <textarea class="form-field" id="message" type="text" v-model="message" rows="5" />
         <div>
           <span v-show="status" class="status" ref="status">{{ status }}</span>
           <input class="form-button" type="submit" value="Send message">
@@ -20,12 +20,11 @@
 
 <script>
 import axios from "axios";
-import { setTimeout } from "timers";
 
 export default {
   name: "ContactForm",
   props: {
-    spreadsheetUrl: String
+    spreadsheetUrl: { type: String, default: '' }
   },
   data() {
     return {

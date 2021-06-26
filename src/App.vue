@@ -7,13 +7,22 @@
       data-ribbon="Fork me on GitHub"
       title="Fork me on GitHub"
       target="_bank"
-    >Fork me on GitHub</a>
+    >
+      Fork me on GitHub
+    </a>
     <profile-page id="home" :profile="profileData" />
     <div id="projects">
-      <elastic-tab :menu="['All', 'Android','Web']" @item-selected="onSelectedType" />
+      <elastic-tab
+        :menu="['All', 'Android', 'Web']"
+        @item-selected="onSelectedType"
+      />
     </div>
     <transition-group tag="div" class="projects" name="projects">
-      <project-card v-for="project in projects" :key="project.name" v-bind="project" />
+      <project-card
+        v-for="project in projects"
+        :key="project.name"
+        v-bind="project"
+      />
     </transition-group>
     <contact-form id="contact" :spreadsheet-url="profileData.spreadsheetUrl" />
   </div>
@@ -38,20 +47,23 @@ export default {
     ElasticTab,
     ProfilePage,
     ContactForm,
-    Navigator
+    Navigator,
   },
   data() {
-    return { projects: projectData, profileData: profileData };
+    return {
+      projects: projectData,
+      profileData: profileData,
+    };
   },
   methods: {
     onSelectedType(type) {
       if (type == "All") {
         this.projects = projectData;
       } else {
-        this.projects = projectData.filter(i => i.type === type);
+        this.projects = projectData.filter((i) => i.type === type);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -87,22 +99,23 @@ body {
   }
 }
 
-.projects-move {
-  transition: all 500ms;
+.projects > .card {
+  transition: all 0.3s ease-in-out;
 }
-.projects-enter-active {
-  transition: all 200ms ease-out;
+
+.projects-enter-from {
+  transform: scale(0.5) translateY(150px);
+  opacity: 0;
+}
+
+.projects-leave-to {
+  transform: translateY(150px);
+  opacity: 0;
 }
 
 .projects-leave-active {
-  position: absolute;
-  transition: all 200ms ease-in;
-  transform: scale(0.5);
-}
-
-.projects-enter,
-.projects-leave-to {
-  opacity: 0;
+  position: absolute !important;
+  z-index: -1;
 }
 
 .github-fork-ribbon:before {

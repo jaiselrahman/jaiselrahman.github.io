@@ -1,7 +1,7 @@
 <template>
   <div class="profile-page">
     <div class="circular-img">
-      <img class="profile" :src="getIcon(profile.profilePic)" >
+      <img class="profile" :src="getIcon(profile.profilePic)" :alt="profile.name">
     </div>
     <div class="name">{{ profile.name }}</div>
     <div class="bio">{{ profile.bio }}</div>
