@@ -117,7 +117,8 @@
       {
         "url": "#",
         "icon": "view_new_tab.png"
-      },{
+      },
+      {
         "url": "https://github.com/jaiselrahman/jaiselrahman.github.io",
         "icon": "view_github.png"
       }

@@ -4,51 +4,51 @@
     <a
       v-for="(item, key) in menu"
       :ref="(el) => (menuRefs[key] = el)"
-      :key="key"
-      :class="{ active: activeId === key }"
-      @click="(event) => click(event, item, key)"
-    >{{ item }}</a>
+      :key="item"
+      :class="{active: activeMenu === item}"
+      @click="(event) => click(event.target, item)"
+    >
+      {{ item }}
+    </a>
   </nav>
 </template>
 
 <script>
-import { onMounted, onBeforeUpdate, ref } from "vue";
+import {onMounted, onBeforeUpdate, ref} from 'vue'
 
 export default {
-  name: "ElasticTab",
-  emits: ["item-selected"],
+  name: 'ElasticTab',
   props: {
-    menu: { type: Array, default: () => [] },
+    menu: {type: Array, default: () => []},
   },
-  setup(props, { emit }) {
-    const activeId = ref(0);
-    const selectorRef = ref(null);
-    const menuRefs = ref([]);
+  emits: ['item-selected'],
+  setup(props, {emit}) {
+    const activeMenu = ref(props.menu[0])
+    const selectorRef = ref(null)
+    const menuRefs = ref([])
 
-    onBeforeUpdate(() => (menuRefs.value = []));
+    onBeforeUpdate(() => (menuRefs.value = []))
 
-    onMounted(() => {
-      const target = menuRefs.value[0];
-      selectorRef.value.style.left = target.offsetLeft + "px";
-      selectorRef.value.style.width = target.offsetWidth + "px";
-    });
+    onMounted(() => setTimeout(() => click(menuRefs.value[0], props.menu[0]), 150))
 
-    const click = (event, item, key) => {
-      let target = event.target;
-      selectorRef.value.style.left = target.offsetLeft + "px";
-      selectorRef.value.style.width = target.offsetWidth + "px";
-      activeId.value = key;
-      emit('item-selected', item)
-    };
+    const click = (target, menu) => {
+      if (!target) return
+      selectorRef.value.style.left = target.offsetLeft + 'px'
+      selectorRef.value.style.width = target.offsetWidth + 'px'
+      if (activeMenu.value !== menu) {
+        activeMenu.value = menu
+        emit('item-selected', menu)
+      }
+    }
 
     return {
       selectorRef,
       menuRefs,
-      activeId,
+      activeMenu,
       click,
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped>
@@ -70,7 +70,6 @@ export default {
   display: inline-block;
   position: relative;
   z-index: 1;
-  transition-duration: 0.5s;
 }
 
 .tabs a.active {
@@ -85,11 +84,9 @@ export default {
   top: 0px;
   z-index: 1;
   border-radius: 50px;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   background: #05abe0;
-  background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
-  background: -webkit-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
   background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
 }
 </style>

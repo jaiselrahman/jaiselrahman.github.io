@@ -1,6 +1,6 @@
 <template>
-  <div class="card" :style="{background: bg}">
-    <img class="img" :src="img" :alt="name">
+  <div class="card">
+    <img class="img" :src="img" :alt="name" />
 
     <h3 class="title">{{ name }}</h3>
 
@@ -10,8 +10,8 @@
         <div v-for="tech in techs" :key="tech" class="tech">{{ tech }}</div>
       </div>
       <div class="links">
-        <a v-for="link in links" :key="link" :href="link.url" target="_blank">
-          <img class="icon" :src="getIcon(link.icon)" alt="">
+        <a v-for="link in links" :key="link.url" :href="link.url" target="_blank">
+          <img class="icon" :src="getIcon(link.icon)" alt="" />
         </a>
       </div>
     </div>
@@ -19,25 +19,21 @@
 </template>
 
 <script>
+import {getIcon} from '@/util'
+
 export default {
-  name: "ProjectCard",
+  name: 'ProjectCard',
   props: {
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    img: { type: String, required: true},
-    techs: { type: Array, required: true },
-    links: { type: Array, required: true }
+    name: {type: String, required: true},
+    description: {type: String, required: true},
+    img: {type: String, required: true},
+    techs: {type: Array, required: true},
+    links: {type: Object, required: true},
   },
   methods: {
-    getIcon(icon) {
-      try {
-        return require("../assets/" + icon);
-      } catch {
-        return null;
-      }
-    },
+    getIcon,
   },
-};
+}
 </script>
 
 <style scoped>

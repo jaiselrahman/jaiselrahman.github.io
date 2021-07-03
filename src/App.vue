@@ -11,37 +11,30 @@
       Fork me on GitHub
     </a>
     <profile-page id="home" :profile="profileData" />
-    <div id="projects">
-      <elastic-tab
-        :menu="['All', 'Android', 'Web']"
-        @item-selected="onSelectedType"
-      />
+    <div id="projects-header">
+      <elastic-tab :menu="['All', 'Android', 'Web']" @item-selected="onSelectedType" />
     </div>
     <transition-group tag="div" class="projects" name="projects">
-      <project-card
-        v-for="project in projects"
-        :key="project.name"
-        v-bind="project"
-      />
+      <project-card v-for="project in projects" :key="project.name" v-bind="project" />
     </transition-group>
     <contact-form id="contact" :spreadsheet-url="profileData.spreadsheetUrl" />
   </div>
 </template>
 
 <script>
-import ProfilePage from "./components/ProfilePage.vue";
-import ElasticTab from "./components/ElasticTab.vue";
-import ProjectCard from "./components/ProjectCard.vue";
-import Navigator from "./components/Navigator.vue";
-import ContactForm from "./components/ContactForm.vue";
+import ProfilePage from '@/components/ProfilePage.vue'
+import ElasticTab from '@/components/ElasticTab.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
+import Navigator from '@/components/Navigator.vue'
+import ContactForm from '@/components/ContactForm.vue'
 
-import "github-fork-ribbon-css/gh-fork-ribbon.css";
+import 'github-fork-ribbon-css/gh-fork-ribbon.css'
 
-import projectData from "./project.json";
-import profileData from "./profile.json";
+import projectData from '@/project.json'
+import profileData from '@/profile.json'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     ProjectCard,
     ElasticTab,
@@ -53,22 +46,22 @@ export default {
     return {
       projects: projectData,
       profileData: profileData,
-    };
+    }
   },
   methods: {
     onSelectedType(type) {
-      if (type == "All") {
-        this.projects = projectData;
+      if (type == 'All') {
+        this.projects = projectData
       } else {
-        this.projects = projectData.filter((i) => i.type === type);
+        this.projects = projectData.filter((i) => i.type === type)
       }
     },
   },
-};
+}
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Itim");
+@import url('https://fonts.googleapis.com/css?family=Itim');
 
 html {
   scroll-behavior: smooth;
@@ -79,7 +72,7 @@ body {
 }
 
 #app {
-  font-family: "Itim";
+  font-family: 'Itim';
 }
 
 .projects {
@@ -88,13 +81,13 @@ body {
   justify-content: space-evenly;
 }
 
-#projects {
+#projects-header {
   text-align: center;
   padding: 1rem;
 }
 
 @media only screen and (max-width: 700px) {
-  #projects {
+  #projects-header {
     padding: 3rem 1rem 1rem 1rem;
   }
 }

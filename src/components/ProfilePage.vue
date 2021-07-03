@@ -1,7 +1,7 @@
 <template>
   <div class="profile-page">
     <div class="circular-img">
-      <img class="profile" :src="getIcon(profile.profilePic)" :alt="profile.name">
+      <img class="profile" :src="getIcon(profile.profilePic)" :alt="profile.name" />
     </div>
     <div class="name">{{ profile.name }}</div>
     <div class="bio">{{ profile.bio }}</div>
@@ -12,28 +12,24 @@
           :alt="contact.name"
           :src="getIcon(contact.icon)"
           :title="contact.name"
-        >
+        />
       </a>
     </div>
   </div>
 </template>
 
 <script>
+import {getIcon} from '@/util'
+
 export default {
-  name: "ProfilePage",
+  name: 'ProfilePage',
   props: {
-    profile: Object
+    profile: {type: Object, default: null},
   },
   methods: {
-    getIcon(icon) {
-      try {
-        return require("../assets/" + icon);
-      } catch {
-        return null;
-      }
-    }
-  }
-};
+    getIcon,
+  },
+}
 </script>
 
 <style scoped>
@@ -41,24 +37,9 @@ export default {
   min-height: 80vh;
   padding: 10vh 0;
   background: #3963bd;
-  background: -moz-linear-gradient(
-    to bottom right,
-    #6f27ad,
-    #3963bd 30% 70%,
-    #6f27ad
-  );
-  background: -webkit-linear-gradient(
-    to bottom right,
-    #6f27ad,
-    #3963bd 30% 70%,
-    #6f27ad
-  );
-  background: linear-gradient(
-    to bottom right,
-    #6f27ad,
-    #3963bd 30% 70%,
-    #6f27ad
-  );
+  background: -moz-linear-gradient(to bottom right, #6f27ad, #3963bd 30% 70%, #6f27ad);
+  background: -webkit-linear-gradient(to bottom right, #6f27ad, #3963bd 30% 70%, #6f27ad);
+  background: linear-gradient(to bottom right, #6f27ad, #3963bd 30% 70%, #6f27ad);
   color: white;
   text-align: center;
 }

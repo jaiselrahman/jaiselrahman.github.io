@@ -1,30 +1,30 @@
 <template>
   <transition-group tag="ul" class="menu" name="menus">
-    <li class="main-icon" key="main" @click="toggle()" ref="menu-bar">
+    <li key="main" ref="menu-bar" class="main-icon" @click="toggle()">
       <div class="container">
         <div class="bar1" />
         <div class="bar2" />
         <div class="bar3" />
       </div>
     </li>
-    <li class="menu-item item-one" key="one" v-show="show">
-      <a class="icon" href="#home" @click="toggle()" title="Home">
-        <img class="icon-one" :src="require('../assets/menu_home_48.png')">
+    <li v-show="show" key="one" class="menu-item item-one">
+      <a class="icon" href="#home" title="Home" @click="toggle()">
+        <img class="icon-one" src="@/assets/menu_home_48.png" />
       </a>
     </li>
-    <li class="menu-item item-two" key="two" v-show="show">
-      <a class="icon" href="#projects" @click="toggle()" title="Projects">
-        <img class="icon-two" :src="require('../assets/menu_projects_48.png')">
+    <li v-show="show" key="two" class="menu-item item-two">
+      <a class="icon" href="#projects-header" title="Projects" @click="toggle()">
+        <img class="icon-two" src="@/assets/menu_projects_48.png" />
       </a>
     </li>
-    <li class="menu-item item-three" key="three" v-show="show">
-      <a class="icon" href="#resume" @click="toggle()" title="Resume">
-        <img class="icon-three" :src="require('../assets/menu_resume_48.png')">
+    <li v-show="show" key="three" class="menu-item item-three">
+      <a class="icon" href="#resume" title="Resume" @click="toggle()">
+        <img class="icon-three" src="@/assets/menu_resume_48.png" />
       </a>
     </li>
-    <li class="menu-item item-four" key="four" v-show="show">
-      <a class="icon" href="#contact" @click="toggle()" title="Contact Me">
-        <img class="icon-four" :src="require('../assets/menu_message_48.png')">
+    <li v-show="show" key="four" class="menu-item item-four">
+      <a class="icon" href="#contact" title="Contact Me" @click="toggle()">
+        <img class="icon-four" src="@/assets/menu_message_48.png" />
       </a>
     </li>
   </transition-group>
@@ -32,19 +32,19 @@
 
 <script>
 export default {
-  name: "Navigator",
+  name: 'Navigator',
   data() {
     return {
-      show: false
-    };
+      show: false,
+    }
   },
   methods: {
     toggle() {
-      this.show = !this.show;
-      this.$refs["menu-bar"].classList.toggle("change");
-    }
-  }
-};
+      this.show = !this.show
+      this.$refs['menu-bar'].classList.toggle('change')
+    },
+  },
+}
 </script>
 
 <style scoped>

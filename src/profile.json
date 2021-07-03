@@ -1,34 +1,34 @@
 {
-    "name": "Jaisel Rahman",
-    "profilePic": "avatar.png",
-    "bio": "I am a B.Tech IT student currently living in Chennai. My interests range from programming to watching movies. If you’d like to get in touch, feel free to say hello through any of the social links below.",
-    "projectUrl": "https://github.com/jaiselrahman/jaiselrahman.github.io",
-    "spreadsheetUrl": "https://script.google.com/macros/s/AKfycbyB9uOgZvG6z9hS_wWJUOyrI0UO1ysgnCvwkxp8porWAGc81P97/exec",
-    "contacts": [
-        {
-            "name": "Github",
-            "icon": "github_56.png",
-            "link": "https://github.com/jaiselrahman"
-        },
-        {
-            "name": "LinkedIn",
-            "icon": "linkedin_56.png",
-            "link": "https://www.linkedin.com/in/jaiselrahman/"
-        },
-        {
-            "name": "Twitter",
-            "icon": "twitter_56.png",
-            "link": "https://twitter.com/jaiselrahman"
-        },
-        {
-            "name": "Stack Overflow",
-            "icon": "stackoverflow_56.png",
-            "link": "https://stackoverflow.com/users/9042438/jaisel-rahman"
-        },
-        {
-            "name": "Blog",
-            "icon": "blogger_56.png",
-            "link": "https://jaiselrahman.blogspot.com"
-        }
-    ]
+  "name": "Jaisel Rahman",
+  "profilePic": "avatar.png",
+  "bio": "I am a B.Tech IT student currently living in Chennai. My interests range from programming to watching movies. If you’d like to get in touch, feel free to say hello through any of the social links below.",
+  "projectUrl": "https://github.com/jaiselrahman/jaiselrahman.github.io",
+  "spreadsheetUrl": "https://script.google.com/macros/s/AKfycbyB9uOgZvG6z9hS_wWJUOyrI0UO1ysgnCvwkxp8porWAGc81P97/exec",
+  "contacts": [
+    {
+      "name": "Github",
+      "icon": "github_56.png",
+      "link": "https://github.com/jaiselrahman"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin_56.png",
+      "link": "https://www.linkedin.com/in/jaiselrahman/"
+    },
+    {
+      "name": "Twitter",
+      "icon": "twitter_56.png",
+      "link": "https://twitter.com/jaiselrahman"
+    },
+    {
+      "name": "Stack Overflow",
+      "icon": "stackoverflow_56.png",
+      "link": "https://stackoverflow.com/users/9042438/jaisel-rahman"
+    },
+    {
+      "name": "Blog",
+      "icon": "blogger_56.png",
+      "link": "https://jaiselrahman.blogspot.com"
+    }
+  ]
 }

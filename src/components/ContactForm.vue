@@ -2,16 +2,16 @@
   <div class="contact-form">
     <h1 class="title">Contact Me</h1>
     <div class="form">
-      <form name="contact" @submit.prevent="submit()" novalidate="true">
+      <form name="contact" novalidate="true" @submit.prevent="submit()">
         <label class="form-label" for="name">Name</label>
-        <input class="form-field" id="name" type="text" v-model="name">
+        <input id="name" v-model="name" class="form-field" type="text" />
         <label class="form-label" for="email">Email</label>
-        <input class="form-field" id="email" type="email" v-model="email" required>
+        <input id="email" v-model="email" class="form-field" type="email" required />
         <label class="form-label" for="message">Message</label>
-        <textarea class="form-field" id="message" type="text" v-model="message" rows="5" />
+        <textarea id="message" v-model="message" class="form-field" type="text" rows="5" />
         <div>
-          <span v-show="status" class="status" ref="status">{{ status }}</span>
-          <input class="form-button" type="submit" value="Send message">
+          <span v-show="status" ref="status" class="status">{{ status }}</span>
+          <input class="form-button" type="submit" value="Send message" />
         </div>
       </form>
     </div>
@@ -19,51 +19,51 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 
 export default {
-  name: "ContactForm",
+  name: 'ContactForm',
   props: {
-    spreadsheetUrl: { type: String, default: '' }
+    spreadsheetUrl: {type: String, default: ''},
   },
   data() {
     return {
-      name: "",
-      email: "",
-      message: "",
-      status
-    };
+      name: '',
+      email: '',
+      message: '',
+      status,
+    }
   },
   methods: {
     submit() {
-      this.setStatus("Submitting...", "default");
+      this.setStatus('Submitting...', 'default')
       if (!/^.+@[^\\.].*\.[a-z]{2,}$/.test(this.email)) {
-        this.setStatus("Invalid email", "error");
+        this.setStatus('Invalid email', 'error')
       } else if (this.message.length <= 0) {
-        this.setStatus("Empty message", "error");
+        this.setStatus('Empty message', 'error')
       } else {
         axios
-          .get(this.spreadsheetUrl, { params: this.$data })
+          .get(this.spreadsheetUrl, {params: this.$data})
           .then(() => {
-            this.setStatus("Successfully submitted", "success");
+            this.setStatus('Successfully submitted', 'success')
           })
           .catch(() => {
-            this.setStatus("Submission failed", "error");
-          });
+            this.setStatus('Submission failed', 'error')
+          })
       }
     },
     setStatus(message, status) {
-      this.$refs.status.classList.remove("default");
-      this.$refs.status.classList.remove("success");
-      this.$refs.status.classList.remove("error");
-      this.$refs.status.classList.add(status);
-      this.status = message;
+      this.$refs.status.classList.remove('default')
+      this.$refs.status.classList.remove('success')
+      this.$refs.status.classList.remove('error')
+      this.$refs.status.classList.add(status)
+      this.status = message
       setTimeout(() => {
-        this.status = null;
-      }, 3000);
-    }
-  }
-};
+        this.status = null
+      }, 3000)
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -71,12 +71,7 @@ export default {
   display: block;
   min-height: 80vh;
   padding: 10vh 0;
-  background: linear-gradient(
-    to bottom right,
-    #6f27ad,
-    #3963bd 30% 70%,
-    #6f27ad
-  );
+  background: linear-gradient(to bottom right, #6f27ad, #3963bd 30% 70%, #6f27ad);
   color: white;
 }
 
@@ -150,7 +145,7 @@ export default {
   border-radius: 0.3rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-  font-family: "Itim";
+  font-family: 'Itim';
   font-size: 14pt;
 }
 
@@ -161,7 +156,7 @@ export default {
 }
 
 .form-button {
-  font-family: "Itim";
+  font-family: 'Itim';
   padding: 0.5rem;
   background: #6f27ad;
   color: white;
