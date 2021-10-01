@@ -6,7 +6,7 @@
   },
   "parser": "vue-eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaVersion": 2020
   },
   "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:vue/vue3-recommended"],
   "plugins": ["prettier", "vue"],
