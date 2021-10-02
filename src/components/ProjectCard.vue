@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <img class="img" :src="img" :alt="name" />
+    <img class="img" :src="getIcon(img)" :alt="name" />
 
     <h3 class="title">{{ name }}</h3>
 

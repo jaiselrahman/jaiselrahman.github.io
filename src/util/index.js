@@ -1,4 +1,4 @@
-const modules = import.meta.globEager('../assets/*.png')
+const modules = import.meta.globEager('../assets/*')
 
 export function getIcon(icon) {
   try {

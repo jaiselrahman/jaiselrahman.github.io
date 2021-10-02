@@ -3,7 +3,7 @@
     "name": "Android FilePicker Library",
     "description": "A FilePicker library for Android for selecting multiple types of files and also to capture Images and Videos.",
     "type": "Android",
-    "img": "",
+    "img": "project_filepicker.png",
     "techs": ["java", "library", "mediastore"],
     "links": [
       {
@@ -20,6 +20,7 @@
     "name": "WorkshopWebsite",
     "description": "A website for machine learning workshop",
     "techs": ["html", "css", "js", "bootstrap", "jquery"],
+    "img": "project_ml_mce.webp",
     "type": "Web",
     "links": [
       {
@@ -36,6 +37,7 @@
     "name": "Fundo",
     "description": "A website built for fun using php. Contains Flames and Xo game.",
     "techs": ["php", "slim", "smarty"],
+    "img": "project_fundo.png",
     "type": "Web",
     "links": [
       {
@@ -51,6 +53,7 @@
   {
     "name": "DialogflowChatbot",
     "description": "Android Chatbot implemented using Dialogflow",
+    "img": "project_dialogflow.png",
     "techs": ["java", "dialogflow", "chatbot"],
     "type": "Android",
     "links": [
@@ -68,6 +71,7 @@
     "name": "Flaminius2k19 Web",
     "description": "MCE Flaminius 2k19 Symposium website",
     "techs": ["vue", "google apps script"],
+    "img": "project_flaminius2k19_web.png",
     "type": "Web",
     "links": [
       {
@@ -83,6 +87,7 @@
   {
     "name": "AgendaCalendarView",
     "description": "Android view with agenda list and calendar with events",
+    "img": "project_agenda_calendar.png",
     "techs": ["java", "library", "paging"],
     "type": "Android",
     "links": [
@@ -95,6 +100,7 @@
   {
     "name": "Flaminius2k19 Android",
     "description": "MCE Flaminius 2k19 Symposium App",
+    "img": "project_flaminius2k19_app.webp",
     "techs": ["ui", "kotlin", "google apps script"],
     "type": "Android",
     "links": [
@@ -109,8 +115,26 @@
     ]
   },
   {
+    "name": "Alan Turing Tribute Page",
+    "description": "Alan Turing Tribute Page",
+    "img": "project_alan_turing.png",
+    "techs": ["html", "css", "bootstrap"],
+    "type": "Web",
+    "links": [
+      {
+        "url": "https://codepen.io/jaiselrahman/full/MGxBEP",
+        "icon": "view_new_tab.png"
+      },
+      {
+        "url": "https://codepen.io/jaiselrahman/pen/MGxBEP",
+        "icon": "view_codepen.png"
+      }
+    ]
+  },
+  {
     "name": "My Personal Portfolio",
     "description": "My Personal Portfolio",
+    "img": "project_portfolio.png",
     "techs": ["vue", "google apps script"],
     "type": "Web",
     "links": [
