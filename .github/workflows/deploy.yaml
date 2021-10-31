@@ -16,7 +16,6 @@ jobs:
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          FOLDER: dist
-          BRANCH: master
-          BASE_BRANCH: src
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          folder: dist
+          branch: master
+          token: ${{ secrets.GITHUB_TOKEN }}
