@@ -12,7 +12,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.24.0",
     "github-fork-ribbon-css": "^0.2.1",
     "vue": "^3.1.4"
   },
