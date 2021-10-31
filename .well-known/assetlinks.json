@@ -1,9 +1,0 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.nexus.walgreens",
-    "sha256_cert_fingerprints":
-    ["DA:E4:41:95:5B:7F:F2:06:4E:96:89:E7:E9:C2:C1:03:0D:7C:CA:30:3E:F0:E0:56:81:56:58:A4:50:48:61:61"]
-  }
-}]
