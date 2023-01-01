@@ -44,7 +44,7 @@ export default {
   },
   data() {
     return {
-      projects: projectData,
+      projects: projectData.projects,
       profileData: profileData,
     }
   },
@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Itim');
+@import url('https://fonts.googleapis.com/css?family=Itim&display=swap');
 
 html {
   scroll-behavior: smooth;

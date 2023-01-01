@@ -1,151 +1,170 @@
-[
-  {
-    "name": "Android FilePicker Library",
-    "description": "A FilePicker library for Android for selecting multiple types of files and also to capture Images and Videos.",
-    "type": "Android",
-    "img": "project_filepicker.png",
-    "techs": ["java", "library", "mediastore"],
-    "links": [
-      {
-        "url": "https://github.com/jaiselrahman/FilePicker/releases/download/1.2.0/app-release.apk",
-        "icon": "view_download.png"
-      },
-      {
-        "url": "https://github.com/jaiselrahman/FilePicker",
-        "icon": "view_github.png"
-      }
-    ]
-  },
-  {
-    "name": "WorkshopWebsite",
-    "description": "A website for machine learning workshop",
-    "techs": ["html", "css", "js", "bootstrap", "jquery"],
-    "img": "project_ml_mce.webp",
-    "type": "Web",
-    "links": [
-      {
-        "url": "https://ml-mce.netlify.com",
-        "icon": "view_new_tab.png"
-      },
-      {
-        "url": "https://github.com/jaiselrahman/WorkshopWebsite",
-        "icon": "view_github.png"
-      }
-    ]
-  },
-  {
-    "name": "Fundo",
-    "description": "A website built for fun using php. Contains Flames and Xo game.",
-    "techs": ["php", "slim", "smarty"],
-    "img": "project_fundo.png",
-    "type": "Web",
-    "links": [
-      {
-        "url": "http://fundo.ezyro.com/",
-        "icon": "view_new_tab.png"
-      },
-      {
-        "url": "https://github.com/jaiselrahman/Fundo",
-        "icon": "view_github.png"
-      }
-    ]
-  },
-  {
-    "name": "DialogflowChatbot",
-    "description": "Android Chatbot implemented using Dialogflow",
-    "img": "project_dialogflow.png",
-    "techs": ["java", "dialogflow", "chatbot"],
-    "type": "Android",
-    "links": [
-      {
-        "url": "https://github.com/jaiselrahman/DialogflowChatbot/releases/download/1.0.0/app-release.apk",
-        "icon": "view_download.png"
-      },
-      {
-        "url": "https://github.com/jaiselrahman/DialogflowChatbot",
-        "icon": "view_github.png"
-      }
-    ]
-  },
-  {
-    "name": "Flaminius2k19 Web",
-    "description": "MCE Flaminius 2k19 Symposium website",
-    "techs": ["vue", "google apps script"],
-    "img": "project_flaminius2k19_web.png",
-    "type": "Web",
-    "links": [
-      {
-        "url": "https://flaminius2k19.web.app/",
-        "icon": "view_new_tab.png"
-      },
-      {
-        "url": "https://github.com/jaiselrahman/Flaminius2k19Web",
-        "icon": "view_github.png"
-      }
-    ]
-  },
-  {
-    "name": "AgendaCalendarView",
-    "description": "Android view with agenda list and calendar with events",
-    "img": "project_agenda_calendar.png",
-    "techs": ["java", "library", "paging"],
-    "type": "Android",
-    "links": [
-      {
-        "url": "https://github.com/jaiselrahman/AgendaCalendarView",
-        "icon": "view_github.png"
-      }
-    ]
-  },
-  {
-    "name": "Flaminius2k19 Android",
-    "description": "MCE Flaminius 2k19 Symposium App",
-    "img": "project_flaminius2k19_app.webp",
-    "techs": ["ui", "kotlin", "google apps script"],
-    "type": "Android",
-    "links": [
-      {
-        "url": "https://play.google.com/store/apps/details?id=app.flaminius.flaminius2k19",
-        "icon": "view_download.png"
-      },
-      {
-        "url": "https://github.com/jaiselrahman/AgendaCalendarView",
-        "icon": "view_github.png"
-      }
-    ]
-  },
-  {
-    "name": "Alan Turing Tribute Page",
-    "description": "Alan Turing Tribute Page",
-    "img": "project_alan_turing.png",
-    "techs": ["html", "css", "bootstrap"],
-    "type": "Web",
-    "links": [
-      {
-        "url": "https://codepen.io/jaiselrahman/full/MGxBEP",
-        "icon": "view_new_tab.png"
-      },
-      {
-        "url": "https://codepen.io/jaiselrahman/pen/MGxBEP",
-        "icon": "view_codepen.png"
-      }
-    ]
-  },
-  {
-    "name": "My Personal Portfolio",
-    "description": "My Personal Portfolio",
-    "img": "project_portfolio.png",
-    "techs": ["vue", "google apps script"],
-    "type": "Web",
-    "links": [
-      {
-        "url": "#",
-        "icon": "view_new_tab.png"
-      },
-      {
-        "url": "https://github.com/jaiselrahman/jaiselrahman.github.io",
-        "icon": "view_github.png"
-      }
-    ]
-  }
-]
+{
+  "projects": [
+    {
+      "name": "Android FilePicker Library",
+      "description": "A FilePicker library for Android for selecting multiple types of files and also to capture Images and Videos.",
+      "type": "Android",
+      "img": "project_filepicker.png",
+      "techs": ["java", "library", "mediastore"],
+      "links": [
+        {
+          "url": "https://github.com/jaiselrahman/FilePicker/releases/download/1.2.0/app-release.apk",
+          "icon": "view_download.png",
+          "label": "Download APK"
+        },
+        {
+          "url": "https://github.com/jaiselrahman/FilePicker",
+          "icon": "view_github.png",
+          "label": "Open Github"
+        }
+      ]
+    },
+    {
+      "name": "WorkshopWebsite",
+      "description": "A website for machine learning workshop",
+      "techs": ["html", "css", "js", "bootstrap", "jquery"],
+      "img": "project_ml_mce.webp",
+      "type": "Web",
+      "links": [
+        {
+          "url": "https://ml-mce.netlify.com",
+          "icon": "view_new_tab.png",
+          "label": "Open in new tab"
+        },
+        {
+          "url": "https://github.com/jaiselrahman/WorkshopWebsite",
+          "icon": "view_github.png",
+          "label": "Open Github"
+        }
+      ]
+    },
+    {
+      "name": "Fundo",
+      "description": "A website built for fun using php. Contains Flames and Xo game.",
+      "techs": ["php", "slim", "smarty"],
+      "img": "project_fundo.png",
+      "type": "Web",
+      "links": [
+        {
+          "url": "http://fundo.ezyro.com/",
+          "icon": "view_new_tab.png",
+          "label": "Open in new tab"
+        },
+        {
+          "url": "https://github.com/jaiselrahman/Fundo",
+          "icon": "view_github.png",
+          "label": "Open Github"
+        }
+      ]
+    },
+    {
+      "name": "DialogflowChatbot",
+      "description": "Android Chatbot implemented using Dialogflow",
+      "img": "project_dialogflow.png",
+      "techs": ["java", "dialogflow", "chatbot"],
+      "type": "Android",
+      "links": [
+        {
+          "url": "https://github.com/jaiselrahman/DialogflowChatbot/releases/download/1.0.0/app-release.apk",
+          "icon": "view_download.png",
+          "label": "Download APK"
+        },
+        {
+          "url": "https://github.com/jaiselrahman/DialogflowChatbot",
+          "icon": "view_github.png",
+          "label": "Open Github"
+        }
+      ]
+    },
+    {
+      "name": "Flaminius2k19 Web",
+      "description": "MCE Flaminius 2k19 Symposium website",
+      "techs": ["vue", "google apps script"],
+      "img": "project_flaminius2k19_web.png",
+      "type": "Web",
+      "links": [
+        {
+          "url": "https://flaminius2k19.web.app/",
+          "icon": "view_new_tab.png",
+          "label": "Open in new tab"
+        },
+        {
+          "url": "https://github.com/jaiselrahman/Flaminius2k19Web",
+          "icon": "view_github.png",
+          "label": "Open Github"
+        }
+      ]
+    },
+    {
+      "name": "AgendaCalendarView",
+      "description": "Android view with agenda list and calendar with events",
+      "img": "project_agenda_calendar.png",
+      "techs": ["java", "library", "paging"],
+      "type": "Android",
+      "links": [
+        {
+          "url": "https://github.com/jaiselrahman/AgendaCalendarView",
+          "icon": "view_github.png",
+          "label": "Open Github"
+        }
+      ]
+    },
+    {
+      "name": "Flaminius2k19 Android",
+      "description": "MCE Flaminius 2k19 Symposium App",
+      "img": "project_flaminius2k19_app.webp",
+      "techs": ["ui", "kotlin", "google apps script"],
+      "type": "Android",
+      "links": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=app.flaminius.flaminius2k19",
+          "icon": "view_download.png",
+          "label": "Download APK"
+        },
+        {
+          "url": "https://github.com/jaiselrahman/AgendaCalendarView",
+          "icon": "view_github.png",
+          "label": "Open Github"
+        }
+      ]
+    },
+    {
+      "name": "Alan Turing Tribute Page",
+      "description": "Alan Turing Tribute Page",
+      "img": "project_alan_turing.png",
+      "techs": ["html", "css", "bootstrap"],
+      "type": "Web",
+      "links": [
+        {
+          "url": "https://codepen.io/jaiselrahman/full/MGxBEP",
+          "icon": "view_new_tab.png",
+          "label": "Open in new tab"
+        },
+        {
+          "url": "https://codepen.io/jaiselrahman/pen/MGxBEP",
+          "icon": "view_codepen.png",
+          "label": "Open Github"
+        }
+      ]
+    },
+    {
+      "name": "My Personal Portfolio",
+      "description": "My Personal Portfolio",
+      "img": "project_portfolio.png",
+      "techs": ["vue", "google apps script"],
+      "type": "Web",
+      "links": [
+        {
+          "url": "#",
+          "icon": "view_new_tab.png",
+          "label": "Open in new tab"
+        },
+        {
+          "url": "https://github.com/jaiselrahman/jaiselrahman.github.io",
+          "icon": "view_github.png",
+          "label": "Open Github"
+        }
+      ]
+    }
+  ]
+}

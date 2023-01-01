@@ -1,7 +1,7 @@
 <template>
   <nav class="tabs">
     <div ref="selectorRef" class="selector" />
-    <a
+    <span
       v-for="(item, key) in menu"
       :ref="(el) => (menuRefs[key] = el)"
       :key="item"
@@ -9,7 +9,7 @@
       @click="(event) => click(event.target, item)"
     >
       {{ item }}
-    </a>
+    </span>
   </nav>
 </template>
 
@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .tabs {
-  background: #fff;
+  /* background: #fff; */
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   position: relative;
@@ -62,9 +62,9 @@ export default {
   text-align: center;
 }
 
-.tabs a {
+.tabs span {
   text-decoration: none;
-  color: #777;
+  color: #555;
   text-transform: uppercase;
   padding: 10px 20px;
   display: inline-block;
@@ -72,7 +72,7 @@ export default {
   z-index: 1;
 }
 
-.tabs a.active {
+.tabs span.active {
   color: white;
 }
 
@@ -87,6 +87,6 @@ export default {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   background: #05abe0;
-  background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+  background: black;/*linear-gradient(45deg, #05abe0 0%, #8200f4 100%);*/
 }
 </style>

@@ -79,6 +79,7 @@ export default {
 .profile {
   position: relative;
   width: 100%;
+  height: fit-content;
   bottom: 1.75rem;
   align-content: center;
   clip-path: ellipse(68% 85% at 50% 10%);

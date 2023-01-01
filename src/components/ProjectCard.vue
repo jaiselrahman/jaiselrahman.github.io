@@ -10,7 +10,13 @@
         <div v-for="tech in techs" :key="tech" class="tech">{{ tech }}</div>
       </div>
       <div class="links">
-        <a v-for="link in links" :key="link.url" :href="link.url" target="_blank">
+        <a
+          v-for="link in links"
+          :key="link.url"
+          :href="link.url"
+          target="_blank"
+          :aria-label="link.label"
+        >
           <img class="icon" :src="getIcon(link.icon)" alt="" />
         </a>
       </div>
