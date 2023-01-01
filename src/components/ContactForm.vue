@@ -31,7 +31,7 @@ export default {
       name: '',
       email: '',
       message: '',
-      status,
+      status: '',
     }
   },
   methods: {
@@ -147,6 +147,11 @@ export default {
   box-sizing: border-box;
   font-family: 'Itim';
   font-size: 14pt;
+}
+
+#message.form-field {
+  resize: vertical;
+  min-height: 58px;
 }
 
 .form-field:focus {
