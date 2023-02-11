@@ -87,6 +87,6 @@ export default {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   background: #05abe0;
-  background: black;/*linear-gradient(45deg, #05abe0 0%, #8200f4 100%);*/
+  background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
 }
 </style>

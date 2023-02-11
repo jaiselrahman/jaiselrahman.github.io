@@ -51,9 +51,9 @@ export default {
   methods: {
     onSelectedType(type) {
       if (type == 'All') {
-        this.projects = projectData
+        this.projects = projectData.projects
       } else {
-        this.projects = projectData.filter((i) => i.type === type)
+        this.projects = projectData.projects.filter((i) => i.type === type)
       }
     },
   },
